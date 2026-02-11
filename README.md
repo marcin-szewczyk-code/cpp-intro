@@ -2,7 +2,7 @@
 
 Moje dawne spojrzenie na podstawy podstaw programowania w C++ (sprzed ponad 15 lat).
 
-Na powstałe z fascynacji *Symfonią C++* Jerzego Grębosza.
+Na podstawie fascynacji *Symfonią C++* Jerzego Grębosza.
 
 ## Zawartość
 
