@@ -3,19 +3,23 @@
 using namespace std;
 
 /*
-  Wskazniki
+  Wskaźniki
 
-  1. Adres zmiennej (kom�rki pami�cie w kt�rej zapisano warto�� zmiennej)
-     uzyskujemy przy uzyciu operatura &, np. &a jest adresem zmiennej a.
-     Adres nie zawiera informacji o typie zmiennej.
-  2. Adres moze byc zapamietany w zmienych specjalnego typu, zwanego wskaznikiem (typ pochodnego).
-     Wskaznik do zmiennej typu T deklarujemy jako T*, np. wskaznik do zmiennej o nazwie "a" typu 
-     "int" deklarujemy jako: int* pa; (p jak pointer - wskaznik) i przypisujemy mu warto�� b�d�c�
-     adresem zmiennej a, czyli: pa = &a;
-     Wskaznik zawiera informacje o typie zmiennej: jest takiego typu, jakiego typu jest zmienna 
-     na ktora wskazuje.
-  3. Jesli pa jest wskaznikiem do zmiennej a, to *pa jest wartoscia zmiennej 
-     wskazywanej przez wskaznik pa (czyli wartoscia zmiennej a).
+  1. Adres zmiennej (komórki pamięci, w której zapisana jest jej wartość)
+     uzyskujemy przy użyciu operatora &, np. &a jest adresem zmiennej a.
+     Sam adres nie zawiera informacji o typie zmiennej.
+
+  2. Adres może być przechowywany w zmiennej specjalnego typu,
+     zwanej wskaźnikiem. Wskaźnik do zmiennej typu T deklarujemy jako T*.
+     Na przykład wskaźnik do zmiennej typu int deklarujemy jako:
+     int* pa;
+     Następnie przypisujemy mu adres zmiennej a:
+     pa = &a;
+     Typ wskaźnika określa typ zmiennej, na którą wskazuje.
+
+  3. Jeżeli pa jest wskaźnikiem do zmiennej a,
+     to wyrażenie *pa oznacza wartość zmiennej wskazywanej przez pa,
+     czyli wartość zmiennej a.
 */
 
 int main()

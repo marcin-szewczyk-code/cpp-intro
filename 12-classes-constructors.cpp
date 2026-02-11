@@ -5,13 +5,19 @@ using namespace std;
 
 /*
   1. Konstruktor i destruktor
-     Konstruktor - pozwala na inicjalizacjÍ obiektu (czyli nadanie wartoúci danym
-                   sk≥adowym obiektu), w momencie deklaracji obiektu.
-     Destruktor  - wykonywany jest przed zlikwidowaniem obiektu (np. zamazuje punkt
-                   na ekranie, reprezentujπcy dany obiekt, np. samolot)
-  2. Sk≥adnik statyczny
-     Dotyczy klasy a nie egzemplarza klasy.
+     Konstruktor pozwala na inicjalizacjƒô obiektu w momencie jego tworzenia
+     (nadanie warto≈õci danym sk≈Çadowym).
+     Destruktor wykonuje siƒô przed zniszczeniem obiektu (np. przy wyj≈õciu z zakresu).
+
+  2. Sk≈Çadnik statyczny
+     Sk≈Çadnik statyczny nale≈ºy do klasy, a nie do pojedynczego obiektu.
+     W tym przyk≈Çadzie zliczamy liczbƒô istniejƒÖcych obiekt√≥w klasy student.
+
+  3. Czas ≈ºycia obiektu
+     Obiekt istnieje do ko≈Ñca zakresu (bloku w { }).
+     Po wyj≈õciu z bloku wywo≈Çywany jest destruktor.
 */
+
 
 class student {
  private:
@@ -29,10 +35,10 @@ class student {
  }
  
  // destruktor (definicja destruktora nie zawiera typu zwracanego,
- // nazwa jest taka sama jak nazwa klasy i poprzedzona jest tyldπ)
+ // nazwa jest taka sama jak nazwa klasy i poprzedzona jest tyldƒÖ)
   ~student() {
       liczba_egzemplarzy--;
-      // tak naprawdÍ ten destruktor nie czyúci, tylko gada øe czyúci
+      // ten destruktor nie czy≈õci, tylko gada ≈ºe czy≈õci
       cout<<"Czyszcze: "<<nazwisko<<endl;
  }
  
@@ -53,9 +59,9 @@ class student {
 int student::liczba_egzemplarzy = 0;
 
 int main() {
- student a = student("Kowalski");    // pierwszy sposÛb deklaracji i inicjalizacji obiektu przy uøyciu konstruktora
+ student a = student("Kowalski");    // pierwszy spos√≥b deklaracji i inicjalizacji obiektu przy u≈ºyciu konstruktora
  cout<<"Liczba studentow: "<<student::podajLiczbeEgzemplarzy()<<endl;
- student b("Nowakowski");          // drugi sposÛb
+ student b("Nowakowski");          // drugi spos√≥b
  cout<<"Liczba studentow: "<<student::podajLiczbeEgzemplarzy()<<endl;
 
  a.przypiszOcene(4.5);
@@ -63,9 +69,9 @@ int main() {
  a.wypisz();
  b.wypisz();
  
- // czas øycia obiektu ograniczajπ nawiasy klamrowe
+ // czas ≈ºycia obiektu ograniczajƒÖ nawiasy klamrowe
  {
-   student a("Iksinski");            // zas≥anianie nazwy
+   student a("Iksinski");            // zas≈Çanianie nazwy
    a.wypisz();
    a.przypiszOcene(3.0);
    cout<<"Liczba studentow: "<<student::podajLiczbeEgzemplarzy()<<endl;

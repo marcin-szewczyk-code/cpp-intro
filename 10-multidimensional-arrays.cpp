@@ -4,6 +4,20 @@ using namespace std;
 
 /*
   Macierze
+
+  1. Macierz dwuwymiarowa jest tablicą dwuwymiarową,
+     np. double a[2][2] oznacza macierz 2x2 typu double.
+
+  2. Element macierzy odczytujemy przez podanie dwóch indeksów,
+     np. a[i][j], gdzie i oznacza wiersz, a j kolumnę.
+
+  3. Funkcja wypisz przyjmuje nazwę macierzy oraz jej rozmiar
+     i wypisuje wszystkie elementy przy użyciu zagnieżdżonych pętli.
+
+  4. Mnożenie macierzy realizowane jest za pomocą trzech pętli:
+     - i oznacza numer wiersza,
+     - j oznacza numer kolumny,
+     - k służy do sumowania iloczynów odpowiednich elementów.
 */
 
 void wypisz(char *nazwa, double a[2][2], int rows, int cols) {
@@ -28,7 +42,7 @@ int main() {
  wypisz("c", c, 2, 2);
 
 
- // mno�enie macierzy
+ // mnożenie macierzy
  for (int i = 0; i < 2; i++) {
 	for (int j = 0; j < 2; j++) {
 		for (int k = 0; k < 2; k++) {

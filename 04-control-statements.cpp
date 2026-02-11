@@ -20,17 +20,17 @@ int main()
  }
 
 
- cout<<"Wpisz 1 aby wypisa� p�tl�: ";
+ cout<<"Wpisz 1 aby wypisac petle: ";
  int i;
  cin>>i;
 
  if (i == 1) {
-	cout<<"Oto p�tla:"<<endl;
+	cout<<"Oto petla:"<<endl;
 	for (int j = 0; j < 10; j++) {
 		cout<<"j = "<<j<<endl;
 	}
  } else {
-	cout<<"Bez p�tli"<<endl;
+	cout<<"Bez petli"<<endl;
  }
 
 

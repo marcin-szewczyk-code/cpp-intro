@@ -2,15 +2,16 @@
 using namespace std;
 
 /*
-  Funkcje
+    Funkcje
 
-  1. Funkcje to podprogramy we wlasciwym programie.
-     Funkcj� nazywamy podprogram, ktory jako rezultat zwraca jak�� warto��.
-  2. Funkcj� wywo�uje si� przez podanie jej nazwy i umieszczonych w nawiasach argument�w.
-  3. W ka�dym programie napisanym w j�zyku C++ znajduje si� funkcja g��wna, o nazwie main,
-     kt�ra wykonywana jest jako pierwsza po uruchomieniu programu.
+    1. Funkcje to podprogramy wydzielone z głównego programu.
+       Mogą zwracać wartość (np. typu double) lub nie zwracać żadnej wartości (void).
 
+    2. Funkcję wywołuje się przez podanie jej nazwy oraz argumentów
+       umieszczonych w nawiasach.
 
+    3. W każdym programie napisanym w języku C++ znajduje się funkcja główna
+       o nazwie main, która wykonywana jest jako pierwsza po uruchomieniu programu.
 */
 
 double pole(double r) {

@@ -5,27 +5,32 @@ using namespace std;
 /*
   Tablice (i napisy)
 
-  1. Deklarowanie tablic: np. int a[10]; - deklaracja dziesiecioelementowej (od 0 do 9)
-	tablicy zmiennych typu int
-  2. Nazwa tablicy jest wskaznikiem do pierwszego elementu tej tablicy
-  3. Inkrementacja wskaznikow - zwiekszaj±c wartroi¶c wska¿nika uzyskujê dostêp
-	do kolejnych elementów tablicy
-  4. Napis to tablica znakow, czyli zmiennych typu char. Ostatnim znakiem napisu jest zero.
-     Np. napis "abc" zapisywany jest w czteroelementowej tablicy o elementach: a, b, c, 0.
+  1. Deklarowanie tablic, np. int a[10]; oznacza tablicÄ™ 10 elementÃ³w (indeksy od 0 do 9)
+     typu int.
 
+  2. Nazwa tablicy w wyraÅ¼eniu zachowuje siÄ™ jak wskaÅºnik (adres) do pierwszego elementu,
+     np. a to adres a[0].
+
+  3. Arytmetyka wskaÅºnikÃ³w: zwiÄ™kszajÄ…c wskaÅºnik (np. a + 1) przechodzimy do kolejnego
+     elementu tablicy. PrzesuniÄ™cie jest liczone w elementach, a nie w bajtach.
+
+  4. Napis to tablica znakÃ³w (char) zakoÅ„czona znakiem '\0'.
+     Np. napis "abc" jest zapisany jako: 'a', 'b', 'c', '\0'.
+
+  5. W tym przykÅ‚adzie pokazane jest teÅ¼ przeciÄ…Å¼anie funkcji (wypisz dla int* i char*).
 */
 
  void wypisz(int* p, int rozmiar) {
-	cout<<"Wypisujê tablicê typu int:"<<endl;
+	cout<<"Wypisuje tablice typu int:"<<endl;
 	for (int i = 0; i < rozmiar; i++) {
 		//cout<<*(p++)<<endl;
 		cout<<p[i]<<endl;
 	}
  }
 
- // prze³adowanie nazwy funkcji
+ // przeï¿½adowanie nazwy funkcji
  void wypisz(char* p, int rozmiar) {
-	cout<<"Wypisujê tablicê typu char:"<<endl;
+	cout<<"Wypisuje tablice typu char:"<<endl;
 	for (int i = 0; i < rozmiar; i++) {
 		//cout<<*(p++)<<endl;
 		cout<<p[i]<<endl;
@@ -37,7 +42,7 @@ int main() {
 
  // deklaracja zmiennej typu int
  int i;
- cout<<"rozmiar i: "<<sizeof(i)<<" bajty"<<endl;	// dla 4 bajtów: 2^(4*8-1) = 2147483648, czyli od 0 do 2147483647
+ cout<<"rozmiar i: "<<sizeof(i)<<" bajty"<<endl;	// dla 4 bajtÃ³w: 2^(4*8-1) = 2147483648, czyli od 0 do 2147483647
  i = 2147483647;
  cout<<"i = "<<i<<endl;
  i = i + 1;
@@ -60,9 +65,9 @@ int main() {
  cout<<"wypisz a: "<<endl;
  wypisz(a, 4);
 
- cout<<"rozmiar wska¼nika: sizeof(*a): "<<sizeof(*a)<<" bajty"<<endl;
+ cout<<"rozmiar wskaÅºnika: sizeof(*a): "<<sizeof(*a)<<" bajty"<<endl;
 
- // inny sposób - definicja tablicy (definicja to deklaracja i przypisanie warto¶ci)
+ // inny sposÃ³b - definicja tablicy (definicja to deklaracja i przypisanie wartoÅ›ci)
  int b[4] = {8, 15, 36, 2};
  cout<<"wypisz b: "<<endl;
  wypisz(b, 4);
@@ -79,7 +84,7 @@ int main() {
 
  // cout<<"!!! = "<<(int)c[0]<<endl;
 
- // ³atwy sposób definiowania i wypisywania napisów:
+ // Å‚atwy sposÃ³b definiowania i wypisywania napisÃ³w:
  char* napis = "Ala ma kota";
  cout<<"napis = "<<napis<<endl;
  wypisz(napis,5);

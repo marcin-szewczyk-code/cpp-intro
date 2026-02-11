@@ -5,14 +5,25 @@ using namespace std;
 
 /*
   1. Dziedziczenie
-     klasa podstawowa, klasy pochodne, etykieta protected
-  2. tablice obiektów, przyk³ad u¿ycia
-  3. prze³adowanie konstruktorów
+     Klasa podstawowa (osoba) i klasy pochodne (student, nauczyciel).
+     Etykieta protected umoÅ¼liwia klasom pochodnym dostÄ™p do pÃ³l imie i nazwisko.
+
+  2. Tablice obiektÃ³w
+     W programie tworzona jest tablica obiektÃ³w typu student i wykonywane sÄ… na niej operacje
+     (wywoÅ‚anie metod, sortowanie, wypisywanie).
+
+  3. PrzeciÄ…Å¼anie konstruktorÃ³w
+     Klasa nauczyciel ma dwa konstruktory (rÃ³Å¼ne listy argumentÃ³w).
+
+  4. Sortowanie tablicy
+     Funkcja sortuj sortuje tablicÄ™ studentÃ³w metodÄ… wyboru (selection sort),
+     porÃ³wnujÄ…c wartoÅ›ci zwracane przez podajWage() (tu: ocena).
 */
+
 
 // klasa podstawowa
 class osoba {
- protected:        // sk³adniki dostêpne w klasie pochodnej
+ protected:        // skÅ‚adniki dostÄ™pne w klasie pochodnej
  char imie[40];
  char nazwisko[40];
 
@@ -39,7 +50,7 @@ class student : public osoba {
       float ocena;
       
       public:
-      // konstruktor (konstruktora siê nie dziedziczy)
+      // konstruktor (konstruktora siÄ™ nie dziedziczy)
       student(char* napis1, char* napis2, float f) : osoba(napis1, napis2) {
           ocena = f;
       }
@@ -98,8 +109,8 @@ class nauczyciel : public osoba {
 
 void sortuj(student* os, int rozmiar) {
  // sortowanie przez wybieranie:
- //  1. wyszukaj maksymaln¹ wartoœæ z tablicy spoœród elementów od i+1 do koñca tablicy
- //  2. zamieñ wartoœæ maksymaln¹, z elementem na pozycji i
+ //  1. wyszukaj maksymalnÄ… wartoÅ›Ä‡ z tablicy spoÅ›rÃ³d elementÃ³w od i+1 do koÅ„ca tablicy
+ //  2. zamieÅ„ wartoÅ›Ä‡ maksymalnÄ…, z elementem na pozycji i
  int max;
  for (int i = 0; i < rozmiar - 1; i++) {
      max = i;

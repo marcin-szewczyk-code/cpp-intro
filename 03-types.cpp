@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	Podstawowe typy zmiennych, oraz elementarne operacje wejścia/wyjścia.
+	Podstawowe typy zmiennych, elementarne operacje wejścia/wyjścia.
 */
 
 int main() {

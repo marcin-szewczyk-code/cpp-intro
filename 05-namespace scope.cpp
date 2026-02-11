@@ -12,7 +12,7 @@ using namespace std;
 	znana jest kompilatorowi.
 */
 
-int g;	// obiekt zdefiniowany poza funkcj� main (obiekt globalny),
+int g;	// obiekt zdefiniowany poza funkcją main (obiekt globalny),
 
 int main() {
 
@@ -22,8 +22,8 @@ int main() {
 
  // blok instrukcji - nawiasy klamrowe
  {
-	int k = 3;	// obiekt w bloku zas�ania obiekt zdefiniowany w funkcji main
-			// obiekt k zdefiniowany w main �yje, ale jest zas�oni�ty przez obiekt k zdefiniowany wewn�trz bloku
+	int k = 3;	// obiekt w bloku zasłania obiekt zdefiniowany w funkcji main
+			// obiekt k zdefiniowany w main żyje, ale jest zasłonięty przez obiekt k zdefiniowany wewnątrz bloku
 	cout<<"Jestem w bloku: k = "<<k<<endl;
  }
 
@@ -31,7 +31,7 @@ int main() {
 
  // znowu blok
  {
-	k = 4;	// tym razem bez zas�aniania
+	k = 4;	// tym razem bez zaslaniania
  }
 
  cout<<"Jestem w main: k = "<<k<<endl;
@@ -41,7 +41,7 @@ int main() {
 	int m = 10;
  }
 
- // cout<<"Jestem w main: m = "<<m<<endl;	// uwaga: tu kompilator wy�wietli b��d
+ // cout<<"Jestem w main: m = "<<m<<endl;	// uwaga: tu kompilator wyświetli błąd
 
  return 0;
 }

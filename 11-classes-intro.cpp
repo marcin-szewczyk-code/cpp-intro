@@ -4,38 +4,45 @@
 using namespace std;
 
 /*
-  0. Typy:
-     - podstawowe (inaczej fundamentalne), np. int, float, double, char
-     - pochodne, np. wskaŸniki: int*, float*, char*; tablice: char ch[10]
-     - definiowane przez uzytkownika: KLASY
-  1. Klasy to typy definiowane przez u¿ytkownika.
-  2. Programowanie przy u¿yciu klas pozwala na tworzenie programów, które s¹
-     odzwierciedleniem rzeczywistoœci - ka¿demu rzeczywistemu obiektowi
-     przyporz¹dkowany jest obiekt klasy zdefiniowanej przez u¿ytkownika.
-  3. Definicja klasy zawiera sk³adniki klasy: dane sk³adowe (pola) i funkcje
-     sk³adowe (metody) - enkapsulacja
-  4. Dostêp do sk³adników klasy mo¿e byæ ograniczony etykietami: public, protected, private.
-  5. Dostêp do danych sk³adowych lub wywo³anie funkcji sk³adowej odbywa siê
-     na rzecz konkretnego obiektu klasy (operatory . oraz ->).
-  6. Pos³ugiwanie siê obiektami klas zdefiniowanych przez u¿ytkownika jest identyczne
-     jak pos³ugiwanie siê obiektami typów fundamentalnych.
+  Klasy
+
+  0. Typy w C++:
+     - podstawowe (fundamentalne), np. int, float, double, char
+     - pochodne, np. wskaÅºniki (int*, float*, char*) oraz tablice (np. char ch[10])
+     - definiowane przez uÅ¼ytkownika, np. klasy
+
+  1. Klasa to typ definiowany przez uÅ¼ytkownika. Obiekt to zmienna (egzemplarz) danej klasy.
+
+  2. Klasa moÅ¼e zawieraÄ‡:
+     - dane skÅ‚adowe (pola)
+     - funkcje skÅ‚adowe (metody)
+     Jest to przykÅ‚ad enkapsulacji (zamkniÄ™cia danych i funkcji w jednym typie).
+
+  3. DostÄ™p do skÅ‚adnikÃ³w klasy kontrolujÄ… etykiety: public, protected, private.
+
+  4. DostÄ™p do pÃ³l i metod odbywa siÄ™ na rzecz konkretnego obiektu:
+     - obiekt.pole oraz obiekt.metoda()
+     - wskaÅºnik->pole oraz wskaÅºnik->metoda()
+
+  5. Z obiektÃ³w klas korzysta siÄ™ podobnie jak z typÃ³w podstawowych: moÅ¼na je deklarowaÄ‡,
+     przekazywaÄ‡ do funkcji i tworzyÄ‡ tablice obiektÃ³w.
 */
 
 // definicja klasy
 class student {
- // enkapsulacja: definicja klasy zawiera dane sk³adowe (pola) oraz funkcje
- // sk³adowe (metody) - s¹ to sk³adniki klasy
- // dostêp do sk³adników klasy okreœlany przy u¿yciu etykiet: private, protected, public.
- private:     // sk³adniki prywatne, dostêpne wewn¹trz definicji klasy
+ // enkapsulacja: definicja klasy zawiera dane skÅ‚adowe (pola) oraz funkcje
+ // skÅ‚adowe (metody) - sÄ… to skÅ‚adniki klasy
+ // dostÄ™p do skÅ‚adnikÃ³w klasy okreÅ›lany przy uÅ¼yciu etykiet: private, protected, public.
+ private:     // skÅ‚adniki prywatne, dostÄ™pne wewnÄ…trz definicji klasy
  int skladnik_probny;
 
  public:
  char nazwisko[40];
  float ocena;
 
- public:      // sk³adniki publiczne, dostêpne spoza definicji klasy
+ public:      // skÅ‚adniki publiczne, dostÄ™pne spoza definicji klasy
  void zapamietaj(char* napis, float f) {
-      // funkcje sk³adowe maj¹ pe³ny dostêp do wszystkich sk³adników klasy
+      // funkcje skÅ‚adowe majÄ… peÅ‚ny dostÄ™p do wszystkich skÅ‚adnikÃ³w klasy
       strcpy(nazwisko, napis);
       if (f < 2) f = 2;
       else if (f > 5) f = 5;
@@ -64,25 +71,25 @@ int porownaj(student* s1, student* s2) {
 }
 
 int main() {
- // powtórzenie wiadomoœci o typach
+ // powtÃ³rzenie wiadomoÅ›ci o typach
  // deklaracja zmienej o nazwie i typu int:
- int i; // i jest zmienn¹ typu int, inaczej: egzemplarzem klasy int, inaczej: obiektem klasy int
- // inicjalizacja zmiennej i, czyli przypisanie wartoœci do zmiennej i
+ int i; // i jest zmiennÄ… typu int, inaczej: egzemplarzem klasy int, inaczej: obiektem klasy int
+ // inicjalizacja zmiennej i, czyli przypisanie wartoÅ›ci do zmiennej i
  i = 15;
- // definicja to deklaracja + przypisanie wartoœci:
+ // definicja to deklaracja + przypisanie wartoÅ›ci:
  int j = 12;
  
- // deklaracja obiektów klasy student
+ // deklaracja obiektÃ³w klasy student
  student a;      // a jest egzemplarzem klasy student, inaczej: obiektem klasy student
  student b;      // b jest egzemplarzem klasy student, inaczej: obiektem klasy student
 
- // pos³ugiwanie siê sk³adnikami klasy
- // dostêp do danych sk³adowych lub wywo³anie funkcji sk³adowych odbywa siê
- // na rzecz obiektu danej klasy, przy u¿yciu sk³adni:
+ // posÅ‚ugiwanie siÄ™ skÅ‚adnikami klasy
+ // dostÄ™p do danych skÅ‚adowych lub wywoÅ‚anie funkcji skÅ‚adowych odbywa siÄ™
+ // na rzecz obiektu danej klasy, przy uÅ¼yciu skÅ‚adni:
  // obiekt.pole; obiekt.funkcja(argumenty);
  // wskaznik->pole; wskaznik->funkcja(argumenty);
 
- //a.skladnik_probny = 2.3;  // b³¹d! - ten sk³adnik jest prywatny
+ //a.skladnik_probny = 2.3;  // bÅ‚Ä…d! - ten skÅ‚adnik jest prywatny
  
  a.zapamietaj("Kowalski", 4.5);
  b.zapamietaj("Nowakowski", 5);
@@ -94,15 +101,15 @@ int main() {
 
  // rozmiar obiektu a:
  cout<<"Rozmiar obiektu a: "<<sizeof(a)<<" bajty"<<endl;
- // zatem warto pos³ugiwaæ siê wskaŸnikami
+ // zatem warto posÅ‚ugiwaÄ‡ siÄ™ wskaÅºnikami
  student *pa, *pb;
  pa = &a;
- pa->wypisz();	// wywo³anie funkcji wypisz na rzecz obiektu, na który wskazuje wska¼nik pa
+ pa->wypisz();	// wywoÅ‚anie funkcji wypisz na rzecz obiektu, na ktÃ³ry wskazuje wskaÅºnik pa
  pb = &b;
- cout<<"Rozmiar wska¼nika pa: "<<sizeof(pa)<<" bajty"<<endl<<endl;
+ cout<<"Rozmiar wskaznika pa: "<<sizeof(pa)<<" bajty"<<endl<<endl;
 
 
- cout<<"PORÓWNANIE: "<<a.nazwisko;
+ cout<<"POROWNANIE: "<<a.nazwisko;
  if (porownaj(pa, pb) > 1) {
 	cout<<" ma lepszy wynik od ";
  } else if (porownaj(pa, pb) < 1) {
@@ -112,17 +119,17 @@ int main() {
  }
  cout<<b.nazwisko<<endl<<endl;
 
- // deklarujê nowy obiekt klasy student:
+ // deklarujÄ™ nowy obiekt klasy student:
  student c;
- //c.wypisz();  // uwaga! - wyœwietli siê c¶œ przypadkowego - to nas prowadzi do konstruktorów
+ //c.wypisz();  // uwaga! - wyÅ›wietli siÄ™ coÅ› przypadkowego - to nas prowadzi do konstruktorÃ³w
 
- //tablica obiektów typu student
- c.zapamietaj("Iksiñski", 3);
+ //tablica obiektÃ³w typu student
+ c.zapamietaj("Iksiï¿½ski", 3);
  student tab[3] = {a, b, c};
 
- cout<<"Wypisz tablicê obiektów typu student:"<<endl;
+ cout<<"Wypisz tablice obiektow typu student:"<<endl;
  wypisz(tab, 3);
 
-// system("pause");    
+// system("pause");
  return 0;
 }

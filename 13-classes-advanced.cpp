@@ -5,14 +5,24 @@ using namespace std;
 
 /*
   1. Dziedziczenie
-     klasa podstawowa, klasy pochodne, etykieta protected
-  2. prze≥adowanie konstruktorÛw
-  3. Polimorfizm - wieloúÊ form (funkcje wirtualne)
+     Klasa podstawowa (osoba) i klasy pochodne (student, nauczyciel).
+     Etykieta protected pozwala klasom pochodnym korzystaƒá z p√≥l klasy bazowej.
+
+  2. Konstruktory klas pochodnych
+     Konstruktor klasy pochodnej wywo≈Çuje konstruktor klasy bazowej
+     na li≈õcie inicjalizacyjnej, np. : osoba(n1, n2).
+
+  3. PrzeciƒÖ≈ºanie konstruktor√≥w
+     Klasa nauczyciel ma dwa konstruktory (r√≥≈ºne listy argument√≥w).
+
+  4. Polimorfizm (funkcje wirtualne)
+     Funkcja wypisz() jest wirtualna w klasie bazowej.
+     Wywo≈Çanie po wska≈∫niku do osoby (osoba*) uruchamia wersjƒô z odpowiedniej klasy.
 */
 
 // klasa podstawowa
 class osoba {
- protected:        // sk≥adniki dostÍpne w klasach pochodnych
+ protected:        // sk≈Çadniki dostƒÖpne w klasach pochodnych
  char imie[40];
  char nazwisko[40];
 
@@ -35,7 +45,7 @@ class student : public osoba {
       float ocena;
       
       public:
-      // konstruktor (konstruktora siÍ nie dziedziczy)
+      // konstruktor (konstruktora siƒô nie dziedziczy)
       student(char* n1, char* n2, float f) : osoba(n1, n2) {
           ocena = f;
       }
@@ -77,10 +87,10 @@ class nauczyciel : public osoba {
       }
 };
 
-// funkcja nie bÍdπca sk≥adnikiem øadnej klasy
-void wypisz(osoba* po) {          // argumentem jest wskaünik do obiektu klasy osoba
+// funkcja nie bƒôdƒÖca sk≈Çadnikiem ≈ºadnej klasy
+void wypisz(osoba* po) {          // argumentem jest wska≈∫nik do obiektu klasy osoba
      po->wypisz();     // polimorficzny fragment kodu
-                       // na rzecz obiektu klasy osoba wywo≥ywana jest wirtualna funkcja wypisz
+                       // na rzecz obiektu klasy osoba wywo≈Çywana jest wirtualna funkcja wypisz
 }
 
 int main() {
