@@ -2,7 +2,7 @@
 
 Moje dawne notatki z C++, powstałe z fascynacji *Symfonią C++* Jerzego Grębosza (sprzed ponad 15 lat).
 
-Moje spojrzenie na podstawy podstaw programowania w C++.
+Moje dawne spojrzenie na podstawy podstaw programowania w C++.
 
 ## Zawartość
 
