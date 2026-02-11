@@ -1,26 +1,40 @@
 # cpp-intro
 
+Moje dawne notatki z C++, powstałe z fascynacji *Symfonią C++* Jerzego Grębosza (sprzed ponad 15 lat).
+
 Moje spojrzenie na podstawy podstaw programowania w C++.
 
-## Kompilacja
+## Zawartość
 
-Przykład:
+Repozytorium zawiera krótkie, samodzielne przykłady ilustrujące podstawowe zagadnienia języka C++:
+
+- struktura programu, typy i zakres zmiennych
+- instrukcje sterujące i funkcje
+- wskaźniki, tablice i napisy
+- macierze i operacje na tablicach
+- klasy, enkapsulacja, konstruktory i destruktory
+- dziedziczenie i polimorfizm
+- tablice obiektów i proste sortowanie
+
+Każdy plik jest osobnym przykładem możliwym do kompilacji niezależnie od pozostałych.
+
+## Kompilacja i uruchomienie
+
+Wariant podstawowy:
+
 ```bash
-g++ plik_zrodlowy.cpp
-g++ -std=c++17 -O2 -Wall -Wextra 01_hello.cpp -o hello
-./hello
+g++ 01-hello.cpp
 ```
 
-## Uruchomienie:
+Uruchomienie:
+- Unix / macOS: `./a.out`
+- Windows: `a.exe`
 
-Unix:
-
-```bash
-./a.out
-```
-
-Windows:
+Wariant z flagami:
 
 ```bash
-./a.exe
+g++ -std=c++17 -O2 -Wall -Wextra 01-hello.cpp -o 01-hello
 ```
+Uruchomienie:
+- Unix / macOS: `./01-hello`
+- Windows: `01-hello.exe`
