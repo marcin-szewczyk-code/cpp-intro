@@ -1,8 +1,8 @@
 # cpp-intro
 
-Moje dawne notatki z C++, powstałe z fascynacji *Symfonią C++* Jerzego Grębosza (sprzed ponad 15 lat).
+Moje dawne spojrzenie na podstawy podstaw programowania w C++ (sprzed ponad 15 lat).
 
-Moje dawne spojrzenie na podstawy podstaw programowania w C++.
+Na powstałe z fascynacji *Symfonią C++* Jerzego Grębosza.
 
 ## Zawartość
 
