@@ -1,6 +1,6 @@
 # cpp-intro
 
-Materiały do zajęć z podstaw programowania w C++.
+Moje spojrzenie na podstawy podstaw programowania w C++.
 
 ## Kompilacja
 

@@ -1,4 +1,4 @@
-#include <iostream>	// funkcje cout, cin
+#include <iostream>	// strumienie wejścia/wyjścia: cout, cin
 using namespace std;
 
 /*
